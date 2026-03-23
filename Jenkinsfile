@@ -60,7 +60,7 @@ pipeline {
 
                     kubectl get nodes
 
-                    kubectl apply -f insta.yml
+                    
                     kubectl apply -f auto.yml
                     kubectl apply -f takeit.yml
                     kubectl apply -f food.yml
@@ -97,7 +97,7 @@ pipeline {
             echo "Food:   http://$URL/food"
             echo "Travel: http://$URL/travel"
             echo "DevOps: http://$URL/devops"
-            echo "Insta:  http://$URL/insta"
+            
             echo ""
             echo "======================================"
         '''
