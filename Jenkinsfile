@@ -62,7 +62,7 @@ pipeline {
 
                     kubectl apply -f insta.yml
                     kubectl apply -f auto.yml
-                    kubectl apply -f take.yml
+                    kubectl apply -f takeit.yml
                     kubectl apply -f food.yml
                 '''
             }
