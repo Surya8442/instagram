@@ -27,15 +27,15 @@ spec:
                 port:
                   number: 80
 
-          - path: /insta
+          - path: /takeit
             pathType: Prefix
             backend:
               service:
-                name: auto
+                name: take
                 port:
                   number: 80
 
-          - path: /devops
+          - path: /
             pathType: Prefix
             backend:
               service:
