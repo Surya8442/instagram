@@ -60,8 +60,10 @@ pipeline {
 
                     kubectl get nodes
 
-                    kubectl apply -f deployment.yml
-                    kubectl apply -f Service.yml
+                    kubectl apply -f insta.yml
+                    kubectl apply -f auto.yml
+                    kubectl apply -f take.yml
+                    kubectl apply -f food.yml
                 '''
             }
         }
