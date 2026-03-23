@@ -1,42 +1,42 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
 metadata:
-  name: four-pages-ingress
+  name: k8s-ingress
   annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
-  - host: mywebsite.com
-    http:
-      paths:
-      - path: /home
-        pathType: Prefix
-        backend:
-          service:
-            name: home-service
-            port:
-              number: 80
+    - http:
+        paths:
+          - path: /food
+            pathType: Prefix
+            backend:
+              service:
+                name: delicious
+                port:
+                  number: 80
 
-      - path: /about
-        pathType: Prefix
-        backend:
-          service:
-            name: about-service
-            port:
-              number: 80
+          - path: /travel
+            pathType: Prefix
+            backend:
+              service:
+                name: auto
+                port:
+                  number: 80
 
-      - path: /contact
-        pathType: Prefix
-        backend:
-          service:
-            name: contact-service
-            port:
-              number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: auto
+                port:
+                  number: 80
 
-      - path: /blog
-        pathType: Prefix
-        backend:
-          service:
-            name: blog-service
-            port:
-              number: 80
+          - path: /tom
+            pathType: Prefix
+            backend:
+              service:
+                name: delicious
+                port:
+                  number: 80
