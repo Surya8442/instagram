@@ -1,0 +1,14 @@
+
+	{% for post in all_posts_all_users %}
+	<div class="homefeed-post">
+		<p>
+			<a href="#" data-bs-toggle="modal" data-bs-target="#post-modal-{{post.id}}">
+	   		<img src="{{post.image_url}}" alt="post image"  ><br></a>
+	  		{{post.author.username}} | {{post.timestamp}} <br>
+	  		{{post.caption}}<br>			
+	  	</p>
+		
+		<!--post modal-->
+		{% include 'post_details.html' %}
+		</div>
+	{% endfor %}

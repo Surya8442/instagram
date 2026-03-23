@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+	<div class="row" id="avatar_row">
+		{% include 'profile_avatar.html' %}
+		{% include 'profile_bio.html' %}
+	</div>
+
+	<div class="row" id="posts_row">
+		{% include 'profile_posts.html' %}
+	</div>
+{% endblock app_content %}

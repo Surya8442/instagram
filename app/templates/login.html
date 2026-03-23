@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+}
+
+/* LEFT SIDE */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff7a18, #ff0066, #833ab4);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.left h1 {
+    font-size: 42px;
+    line-height: 1.4;
+    animation: fadeIn 2s ease;
+}
+
+/* RIGHT SIDE */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOGIN CARD */
+.card {
+    width: 350px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: slideUp 1s ease;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff7a18, #ff0066);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* INPUT */
+.input-box {
+    margin: 10px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #ff0066;
+    box-shadow: 0 0 5px rgba(255,0,102,0.3);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff7a18, #ff0066);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* LINKS */
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #ff0066;
+}
+
+/* SIGNUP BOX */
+.signup {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid #eee;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(40px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="left">
+    <h1>
+        See everyday moments <br>
+        from your <b>close friends</b>
+    </h1>
+</div>
+
+<div class="right">
+    <div>
+        <div class="card">
+            <h2>Instagram</h2>
+
+            <form method="POST">
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Phone, username, or email" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit">Log in</button>
+            </form>
+
+            <div class="links">
+                <p><a href="#">Forgot password?</a></p>
+            </div>
+        </div>
+
+        <div class="signup">
+            <p>Don't have an account? <a href="/register">Sign up</a></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

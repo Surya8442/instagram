@@ -1,0 +1,11 @@
+{% for post in posts %}
+	<div class="col-4" id="user-feed">
+			<p>
+			<!--Post Modal -->
+			<a href="#" data-bs-toggle="modal" data-bs-target="#post-modal-{{post.id}}">
+				<img src={{ post.image_url }} alt="post image", height="250", width="250", margin="10px"></a><br>
+				{% include 'post_details.html' %}
+				<!-- todo if no posts -->
+			</p>
+		</div>
+	{% endfor %}

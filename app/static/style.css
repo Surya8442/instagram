@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+#homefeed{
+    margin-top: 30px;
+}
+
+#home-mysection{
+    margin-left: 6px;
+}
+
+.homefeed-post{
+    margin-top: 30px;
+}
+
+#homefeed img{
+    width: 550px;
+}
+
+#new-post-modal{
+    text-align: center;
+}
+#new-post-modal-content{
+    text-align: center;
+}
+
+
+
+
+/* MESSAGES */
+.messages-label{
+    text-align: center;
+}
+
+#view-messages-col{
+    text-align: center;
+}
+
+/* PROFILE */
+#user-feed{
+    text-align: center;
+}
+
+#user-profile-text{
+    text-align: center;
+}
+
+#user-fullname{
+    font-size: large;
+    font-weight:bold;
+}
+
+.change-profile-photo{
+    text-align: center;
+}
+
+#profile-bio-col{
+    margin-top: 5%;
+}
+
+#profile-photo-col{
+    text-align: center;
+    
+}
+
+#avatar_row{
+    margin-bottom:30px;
+}
+
+/* Avatar */
+.avatar img {
+    margin-top: 20px;
+    width: 175px;
+    clip-path: circle(40% at 50% 50%);
+
+  }
+
+#homefeed-myavatar{
+    margin-top: 10%;
+    clip-path: circle(40% at 50% 50%);
+  }
+
+.post-avatar{
+    clip-path: circle(3% at 50% 50%);
+
+}
+
+
+/* POSTS */
+#post-image{
+    text-align: center;
+}
+
+#post-icon{
+    margin-left: 5%;
+}
+
+.comment-field{
+    font-size: small;
+}
+
+#post-right-sidebar{
+    text-align: left;
+}

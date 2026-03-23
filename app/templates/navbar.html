@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-light">
+	<div class="container-fluid">
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<!--Logo-->
+			<a class="navbar-brand" href={{ url_for('index') }}>
+				<img src="https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png" alt="" width="100" height="24">
+			  </a>
+			
+			{% if current_user.is_authenticated %}
+			<!--Home-->
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href={{ url_for('index') }}>Home</a>
+			</li>
+			
+			<!--New Post-->
+
+				
+			<li class="nav-item">
+				
+					{% include 'newpost.html' %}
+					
+			</li>
+			{% endif %}
+			
+			<!--Messages
+			<li class="nav-item">
+				<a class="nav-link" href={{ url_for('messages') }}>Messages</a>
+			</li>-->
+		</ul>
+		<!--search bar-->
+		<form class="d-flex" role="search" action={{ url_for('index') }}>
+		  <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
+		  <button class="btn btn-outline-success" type="submit">Search</button>
+		</form>
+		<!--end search bar-->
+	  
+	</div>
+	</div>
+  </nav>
