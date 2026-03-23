@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suryadeployauto
+  labels:
+    app: autoapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: autoapp
+  template:
+    metadata:
+      labels:
+        app: autoapp
+    spec:
+      containers:
+        - name: mycont4
+          image: surya8442/autoassist:latest
+          ports:
+            - containerPort: 1337
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auto
+spec:
+  selector:
+    app: autoapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 1337
+  type: ClusterIP
