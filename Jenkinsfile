@@ -89,7 +89,7 @@ pipeline {
                 sh '''
                     echo "======================================"
                     echo "Application deployed successfully 🚀"
-                    echo "Access it at: http://myapp.local"
+                    echo "Access it at: http://insta.local"
                     echo "======================================"
                 '''
             }
