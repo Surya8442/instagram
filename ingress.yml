@@ -40,3 +40,5 @@ spec:
             backend:
               service:
                 name: insta
+                port:
+                  number: 80   # ✅ FIXED
