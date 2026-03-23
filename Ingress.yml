@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: four-pages-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: mywebsite.com
+    http:
+      paths:
+      - path: /home
+        pathType: Prefix
+        backend:
+          service:
+            name: home-service
+            port:
+              number: 80
+
+      - path: /about
+        pathType: Prefix
+        backend:
+          service:
+            name: about-service
+            port:
+              number: 80
+
+      - path: /contact
+        pathType: Prefix
+        backend:
+          service:
+            name: contact-service
+            port:
+              number: 80
+
+      - path: /blog
+        pathType: Prefix
+        backend:
+          service:
+            name: blog-service
+            port:
+              number: 80
