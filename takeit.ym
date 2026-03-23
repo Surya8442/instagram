@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suryadeploy
+  labels:
+    app: takeit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: takeit
+  template:
+    metadata:
+      labels:
+        app: takeit
+    spec:
+      containers:
+        - name: mycont
+          image: surya8442/take_it:0.1
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservice
+spec:
+  selector:
+    app: takeit
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+type: ClusterIP
