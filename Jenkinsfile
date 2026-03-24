@@ -72,7 +72,7 @@ pipeline {
                     kubectl apply -f ingress.yml
 
                     echo "======================================"
-                    echo "Ingress deployed successfully 🌐"
+                    echo "Ingress deployed successfully "
                     echo "======================================"
 
                     kubectl get ingress
@@ -88,7 +88,7 @@ pipeline {
             URL=$(kubectl get ingress k8s-ingress -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
 
             echo "======================================"
-            echo "Application deployed successfully 🚀"
+            echo "Application deployed successfully"
             echo ""
             echo "Food:   http://$URL/food"
             echo "Travel: http://$URL/travel"
