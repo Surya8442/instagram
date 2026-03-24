@@ -4,6 +4,8 @@ metadata:
   name: k8s-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
@@ -39,4 +41,4 @@ spec:
               service:
                 name: insta
                 port:
-                  number: 80
+                  number: 80 
