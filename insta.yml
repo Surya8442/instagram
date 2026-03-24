@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: instadeploy
-  labels:
-    app: instaapp
 spec:
   replicas: 3
   selector:
@@ -29,7 +27,6 @@ spec:
   selector:
     app: instaapp
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 5000
   type: ClusterIP
