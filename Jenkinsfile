@@ -47,11 +47,6 @@ pipeline {
             }
         }
 
-        stage('Approval') {
-            steps {
-                input "Approve deployment to Kubernetes?"
-            }
-        }
 
         stage('Deploy to Kubernetes') {
             steps {
