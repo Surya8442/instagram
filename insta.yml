@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: instacont
-          image: zydou/instagram
+          image: surya8442/instagram:v1
           ports:
             - containerPort: 5000
 
